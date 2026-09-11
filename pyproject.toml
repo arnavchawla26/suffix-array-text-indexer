@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "suffix-array-text-indexer"
+version = "1.0.0"
+description = "A from-scratch suffix array + LCP array text indexing library with substring search, longest repeated substring, and longest common substring."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Arnav Chawla" }]
+keywords = ["suffix-array", "lcp-array", "string-algorithms", "text-indexing", "kasai"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Text Processing :: Indexing",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pyflakes>=3.0"]
+
+[project.scripts]
+sitext = "suffix_array_text_indexer.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["suffix_array_text_indexer*"]
